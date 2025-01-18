@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.css';
 import imagenFondo from '../../assets/banner.jpg';
-import imageAsset from '../../assets/destacado.jpg';
+import imageAsset from '../../assets/destacado.jpeg';
 
 const Banner = ({ title, subtitle }) => {
   return (
