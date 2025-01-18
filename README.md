@@ -47,13 +47,12 @@ Para ejecutar el proyecto localmente, sigue los siguientes pasos:
 
 4.  **Instala y ejecuta JSON Server (en otro terminal)**:
     npm install -g json-server
-    json-server --watch db.json --port 5000
+    json-server --watch db.json 
 
 5.  **Ejecuta la aplicación React**:
     npm start
 
-Ahora, la aplicación debería estar disponible en http://localhost:3000 y JSON Server estará corriendo en http://localhost:5000.
-
+Ahora,  JSON Server estará corriendo en http://localhost:3000 y la aplicación debería estar disponible en un http://localhost: te dirá que ya hay algo corriendo en el puerto:3000 si quieres cambiar el puerto y le pones que si(Y)
  ## Configuración de JSON Server
  
 JSON Server está configurado para leer el archivo db.json y emular un servidor API RESTful. El archivo db.json contiene los siguientes datos:
