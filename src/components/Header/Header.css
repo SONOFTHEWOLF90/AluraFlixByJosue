@@ -1,0 +1,92 @@
+/* Header.css */
+.header {
+  background: linear-gradient(to right, #020F59, #010B40);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  position: relative; 
+
+  
+}
+
+.header-logo {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+
+}
+
+.header-logo img {
+  height: 40px; /* Ajusta la altura del logo */
+  width: auto; 
+}
+
+.header-buttons {
+  display: flex;
+  gap: 20px;
+  margin-right: 100px;
+  padding-left: 20px; 
+}
+
+.header-button {
+  background-color: #020F59;
+  color: white;
+  border: 2px solid #020F59;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-button:hover {
+  background-color: #010B40;
+  border-color: #010B40;
+  color: #FFA500;
+}
+
+.header-button:focus {
+  outline: none;
+}
+
+.header-button .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilos para pantallas responsivas (máximo 767px) */
+@media (max-width: 767px) {
+  /* Mover el header a la parte inferior */
+  .header {
+    position: fixed; /* Fijamos el header */
+    bottom: 0; /* Ubicamos el header en la parte inferior */
+    top: unset; /* Aseguramos que no se quede pegado en la parte superior */
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 10px 20px; /* Espaciado adecuado */
+  }
+
+  .header-logo {
+    display: none; /* Ocultamos el logo en pantallas pequeñas */
+  }
+
+  .header-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 5px;
+    font-size: 0.8rem; 
+    font-size: 0.8rem;
+  }
+
+}

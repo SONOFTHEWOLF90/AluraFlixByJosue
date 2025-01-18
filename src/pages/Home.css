@@ -1,0 +1,81 @@
+/* Home.css */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.category {
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.category h3 {
+  background-color: #FFA500; /* Color del fondo */
+  color: white; /* Color de texto */
+  margin: 0;
+  padding: 10px;
+  width: 30vw; /* Tamaño ajustado para el fondo */
+  text-align: left; /* Alinea el texto a la izquierda por defecto */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 24px; /* Tamaño de letra */
+}
+
+/* Estilo para el contenedor de videos en la página de inicio */
+.video-list-home {
+  display: flex;
+  flex-wrap: nowrap; /* No permitir que los videos bajen a nuevas líneas */
+  gap: 15px; /* Espacio entre tarjetas */
+  justify-content: flex-start; /* Alinea los videos a la izquierda */
+  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  padding: 10px 0; /* Padding superior e inferior */
+}
+
+.video-list-home::-webkit-scrollbar {
+  height: 8px; /* Ajusta el grosor de la barra de desplazamiento horizontal */
+}
+
+.video-list-home::-webkit-scrollbar-thumb {
+  background-color: #020f59; /* Color de la barra de desplazamiento */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.video-list-home::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Color de fondo de la barra de desplazamiento */
+}
+
+/* Estilo para los video-cards */
+.video-card {
+  flex-shrink: 0; /* Evitar que se reduzcan */
+  margin-right: 15px; /* Espacio entre tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(25% - 15px);
+}
+
+
+
+/* Tablet: 2 videos por fila */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .video-card {
+    width: calc(50% - 30px); /* 2 tarjetas por fila */
+  }
+  .category h3 {
+    text-align: center; /* Centrado en 1024px */
+    margin: 0 auto; /* Asegura que el fondo también se centre */
+  }
+}
+
+/* Mobile: 1 video por fila */
+@media (max-width: 767px) {
+  .video-card {
+    width: calc(100% - 15px); /* 1 tarjeta por fila */
+  }
+  .category h3 {
+    text-align: left; /* Alineado a la izquierda en 767px */
+    margin-left: 10px; /* Asegura la alineación con los videos */
+  }
+}

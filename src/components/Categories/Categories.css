@@ -1,0 +1,60 @@
+.category {
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.category h3 {
+  background-color: #FFA500; /* Fondo del título */
+  color: white; /* Color del texto */
+  margin: 0;
+  padding: 10px;
+  width: 30vw; /* Tamaño ajustado para el fondo */
+  text-align: left; /* Alineado a la izquierda por defecto */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 24px; /* Tamaño del texto */
+}
+
+/* Contenedor de videos en desktop */
+.video-list-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* Centra las tarjetas en desktop */
+}
+
+/* Scroll horizontal en responsive */
+@media (max-width: 1024px) {
+  .category h3 {
+    text-align: center; /* Centrado en 1024px */
+    margin: 0 auto;
+  }
+
+  .video-list-categories {
+    flex-wrap: nowrap; /* Evita que los videos bajen */
+    overflow-x: auto; /* Agrega desplazamiento horizontal */
+    scrollbar-width: thin; /* Estiliza el scroll en Firefox */
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  .video-list-categories::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .video-list-categories::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  .video-list-categories::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+@media (max-width: 767px) {
+  .category h3 {
+    text-align: left; /* Alineado a la izquierda en 767px */
+    margin-left: 10px;
+  }
+}

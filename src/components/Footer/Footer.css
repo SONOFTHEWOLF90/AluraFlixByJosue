@@ -1,0 +1,25 @@
+/* Footer.css */
+.footer {
+  background-color: #010626; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-logo {
+  width: auto; /* Ajusta el tamaño del logo */
+  height: 50px;
+  
+}
+
+.footer p {
+  font-size: 14px; /* Tamaño del texto */
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    display: none;
+  }
+}

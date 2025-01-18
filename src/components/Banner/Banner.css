@@ -1,0 +1,76 @@
+/* Banner.css */
+.banner {
+  width: 100%;
+  height: min(40vh, 300px);
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover; /* Ajusta el fondo para cubrir el contenedor */
+  background-position: center center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+}
+
+/* Ajuste de columnas */
+.text-column,
+.image-column {
+  width: 50%; /* Ambas columnas ocupan el 50% del ancho */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box; /* Evita que el padding afecte el tamaño */
+}
+.banner h1 {
+  font-size: clamp(24px, 4vw, 42px); /* Se ajusta entre 24px y 42px */
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.banner p {
+  font-size: clamp(16px, 2.5vw, 30px); /* Se ajusta entre 16px y 30px */
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/* Corregir el tamaño y alineación de la imagen */
+.banner-image {
+  max-width: 80%; /* Ajuste de tamaño */
+  max-height: 100%; /* Limita la altura */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: auto; /* Centrar la imagen */
+}
+
+/* Ajuste responsivo */
+
+@media (max-width: 767px) {
+  .banner {
+    display: none;
+  }
+}

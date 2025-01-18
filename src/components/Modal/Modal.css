@@ -1,0 +1,139 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(3, 2, 71);
+  background-color: rgba(5, 0, 32, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #09001f;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  color: #ffffff; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; 
+  text-align: left;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close img {
+  width: 25px; /* Tamaño del icono */
+  height: 25px; /* Tamaño del icono */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.form-group-modal {
+  margin-bottom: 5px;
+}
+
+.form-group-modal label {
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+}
+
+.form-group-modal input,
+.form-group-modal textarea,
+.form-group-modal select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.form-group-modal-descripcion {
+  margin-bottom: 5px;
+}
+
+.form-group-modal-descripcion label {
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+}
+
+.form-group-modal-descripcion textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  text-align: center;
+  gap: 10px;
+}
+
+.guardar-button-modal,
+.limpiar-button-modal {
+  width: 35%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.guardar-button-modal {
+  background-color: #03178C;
+  color: white;
+  border: none;
+}
+
+.limpiar-button-modal {
+  background-color: #888888;
+  color: white;
+  border: none;
+}
+
+.limpiar-button-modal:hover {
+  background-color: #666666;
+}
+
+.guardar-button-modal:hover {
+  background-color: #021373;
+}
+
+@media (max-width: 767px) {
+  .form-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .guardar-button-modal, .limpiar-button-modal {
+    width: 50%;
+    max-width: 280px;
+  }
+}

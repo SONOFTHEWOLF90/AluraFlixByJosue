@@ -1,0 +1,70 @@
+/* VideoCard.css */
+.video-card {
+  border-radius: 10px; /* Borde redondeado */
+  overflow: hidden; /* Asegura que el contenido no se salga de la card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  margin: 10px; /* Margen alrededor de cada tarjeta */
+}
+
+.video-card:hover {
+   transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.video-thumbnail {
+  width: 430px;  /* Ancho fijo */
+  height: 260px; /* Alto fijo */
+  object-fit: cover; /* Asegura que la imagen se recorte si es necesario */
+  cursor: pointer;
+}
+
+.video-actions {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b1b1b; 
+  padding: 10px;
+}
+/* Estilo de los botones de editar y borrar */
+.edit-button, .delete-button {
+  background-color: transparent; /* Sin fondo */
+  color: white; /* Texto blanco */
+  cursor: pointer;
+  font-size: 16px; /* Tamaño de la fuente */
+  font-family: 'Montserrat', sans-serif; /* Fuente personalizada */
+  font-weight: 700; /* Grosor de la fuente */
+  border: none; /* Sin borde */
+  display: flex; /* Usamos flex para alinear el texto y el ícono */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  padding: 0; /* Eliminar el padding para que solo ocupe el espacio del ícono */
+  gap: 5px; /* Espacio entre el ícono y el texto */
+  transition: color 0.3s ease;
+}
+
+/* Hover de los botones */
+.edit-button:hover {
+  color: #FFA500; /* Cambia el color a naranja cuando pasa el mouse */
+}
+
+.delete-button:hover {
+  color: #FF4B4B; /* Cambia el color a rojo cuando pasa el mouse */
+}
+
+/* Iconos de los botones (debe incluirse el archivo de los iconos) */
+.edit-button img, .delete-button img {
+  width: 20px; /* Tamaño del ícono */
+  height: 20px; /* Tamaño del ícono */
+}
+
+/* Agrega los iconos en lugar de texto */
+.edit-button {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacio entre el ícono y el texto */
+}

@@ -1,0 +1,44 @@
+{
+  "videos": [
+    {
+      "titulo": "OTRO CSS",
+      "categoria": "Frontend",
+      "imagen": "https://claroperupoc.vtexassets.com/arquivos/ids/1892826/Smartwatch-Live-2.png?v=638518157503970000",
+      "videoUrl": "https://youtu.be/zdEurfZurQg?si=AFxNGwVLl9Tz2X_D",
+      "descripcion": "innovacion y humor ",
+      "id": "be9f"
+    },
+    {
+      "titulo": "frontenda ateros ",
+      "categoria": "Frontend",
+      "imagen": "https://claroperupoc.vtexassets.com/arquivos/ids/2226899/honor-x8b-princ.png?v=638666158762800000",
+      "videoUrl": "https://youtu.be/4MrIW6X9XWo?si=8ocDgfdtpcPwoafR",
+      "descripcion": "ateos vs frontend",
+      "id": "4ee6"
+    },
+    {
+      "titulo": "wwe",
+      "categoria": "Innovación y Gestión",
+      "imagen": "https://claroperupoc.vtexassets.com/arquivos/ids/2226899/honor-x8b-princ.png?v=638666158762800000",
+      "videoUrl": "https://youtu.be/L-NnDf0y06o?si=0u3mlvp1DNYyLifB",
+      "descripcion": "ewe",
+      "id": "cbf4"
+    },
+    {
+      "id": "26ae",
+      "titulo": "  War Thunder",
+      "categoria": "Back-end",
+      "imagen": "https://claroperupoc.vtexassets.com/arquivos/ids/2226899/honor-x8b-princ.png?v=638666158762800000",
+      "videoUrl": "https://youtu.be/4MrIW6X9XWo?si=v4_RpJhME9AD50s1",
+      "descripcion": "ateo"
+    },
+    {
+      "titulo": "que es esto ",
+      "categoria": "Backend",
+      "imagen": "https://claroperupoc.vtexassets.com/arquivos/ids/1477532/huawei-watch-gt-2-diana-marron-20-11-2023.png?v=638360883865230000",
+      "videoUrl": "https://youtu.be/zFBY6gDVVEg?si=H7ikOBbjjN-D3rlC",
+      "descripcion": "es una prueba del backend ",
+      "id": "6682"
+    }
+  ]
+}
