@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# AluraFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AluraFlix es una plataforma de videos creada con **React**. Este proyecto permite registrar, actualizar, eliminar y listar videos, utilizando un servidor local simulado mediante **JSON Server**.
 
-## Available Scripts
+## Índice
 
-In the project directory, you can run:
+- [Descripción](#descripción)
+- [Tecnologías](#tecnologías)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Instalación](#instalación)
+- [Configuración de JSON Server](#configuración-de-json-server)
+- [Uso](#uso)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
 
-### `npm start`
+## Descripción
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+AluraFlix es una aplicación que permite a los usuarios agregar, ver, actualizar y eliminar videos. Utiliza React para la interfaz de usuario y **JSON Server** para emular una API RESTful donde se almacenan los videos. Los usuarios pueden ingresar detalles como título, categoría, URL de la imagen, URL del video y una descripción, los cuales son gestionados a través de una interfaz fácil de usar.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologías
 
-### `npm test`
+Este proyecto fue creado con las siguientes tecnologías:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**: Librería para la creación de interfaces de usuario.
+- **React Router**: Para el manejo de rutas entre las diferentes páginas de la aplicación.
+- **JSON Server**: Para simular un servidor backend y manejar las operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
+- **Axios**: Para realizar solicitudes HTTP a la API de JSON Server.
+- **CSS**: Para el estilo de la aplicación.
 
-### `npm run build`
+## Estructura del Proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **src/components**: Contiene los componentes reutilizables de la aplicación, como `Header`, `Footer`, `Modal`, `VideoCard`, etc.
+- **src/pages**: Contiene las páginas principales de la aplicación, como `Home` y `NuevoVideo`.
+- **db.json**: Archivo que simula la base de datos de los videos, gestionada por JSON Server.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para ejecutar el proyecto localmente, sigue los siguientes pasos:
 
-### `npm run eject`
+1. **Clona el repositorio**:
+   git clone https://github.com/SONOFTHEWOLF90/AluraFlixbyJosue.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Accede a la carpeta del proyecto**:
+    cd AluraFlixbyJosue
+3.  **Instala las dependencias**:
+    npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4.  **Instala y ejecuta JSON Server (en otro terminal)**:
+    npm install -g json-server
+    json-server --watch db.json --port 5000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5.  **Ejecuta la aplicación React**:
+    npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ahora, la aplicación debería estar disponible en http://localhost:3000 y JSON Server estará corriendo en http://localhost:5000.
 
-## Learn More
+ ## Configuración de JSON Server
+ 
+JSON Server está configurado para leer el archivo db.json y emular un servidor API RESTful. El archivo db.json contiene los siguientes datos:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  "videos": 
+    
+      "id": 1,
+      "titulo": "React para Principiantes",
+      "categoria": "Frontend",
+      "imagen": "https://path/to/imagen.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=XXXXX",
+      "descripcion": "Este video cubre los fundamentos de React."
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+JSON Server manejará las siguientes rutas:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+GET /videos: Devuelve la lista de videos.
+POST /videos: Agrega un nuevo video.
+PUT /videos/:id: Actualiza un video existente.
+DELETE /videos/:id: Elimina un video.
 
-### Making a Progressive Web App
+## Uso
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-  **Funcionalidades**:
+Home: Visualiza una lista de los videos agregados.
+Nuevo Video: Agrega un nuevo video al sistema.
+Modal: Edita un video seleccionado.
 
-### Advanced Configuration
+- **Rutas**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+"/": Página principal donde se muestran los videos.
+"/nuevo-video": Página para agregar un nuevo video.
+"/editar-video/:id": Modal para editar un video existente.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contribución
 
-### `npm run build` fails to minify
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Haz un fork del proyecto.
+Crea una rama (git checkout -b feature/nueva-caracteristica).
+Realiza tus cambios y haz commit (git commit -am 'Agrega nueva característica').
+Haz push a la rama (git push origin feature/nueva-caracteristica).
+Abre un Pull Request.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+Este archivo `README.md` proporciona una descripción clara de cómo funciona el proyecto, cómo instalarlo y cómo contribuir. Asegúrate de que los enlaces de la documentación y las rutas sean correctos para tu proyecto. Puedes también incluir más detalles o instrucciones adicionales según sea necesario.
+
+Si necesitas más detalles o ajustes, ¡avísame!
+
+Josue
+
